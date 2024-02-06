@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity in CSS</title>
+    <style>
+        /* The specificty of this selector is 1 */
+        h1{
+            color:aqua
+        }
+        /* The specificity of this selector is 10 */
+        .yellow{
+            color: yellow;
+        }
+        /* The specificity of this selector is 10 */
+        .cred{
+            color: red ;
+        }
+        /* The specificity of this selector is 10 */
+        .cpurple{
+            color: purple;
+        }
+        /*This is an example of attribute selector. The specificity of this selector is 10 */
+        [data-x=a]{
+            color: pink;
+        }
+        h1.yellow.cred.cpurple[href][data-x=a]{
+            color: saddlebrown;
+        }
+        /* FOR THE CASE OF COMPLEX SELECTORS for example h1.yellow then the total specificity is 1+10=11
+           hence the color will be yellow */
+    </style>
+</head>
+<!-- now there is a algorithm in css which is cascade algorithm that decides what property will be applied
+ACCORDING TO THIS ALGORITHM THERE ARE 4 RULES:
+1. POSITION AND ORDER OF APPERANCE IS IMPORTANT:JO BAD MEI PROPERTY HAI WO APPLY HOGI , WORK IN SAME SELECTORS
+      BUT IF THE SELECTOR IS NOT SAME THROUGHOUT SPECIFICITY COMES:
+                                                pseudo class example:a.hover , a.visited , a:link
+                                                 For pseudo selectors,class also {10}
+      I> INLINE STYLE{1000} > ID SELECTOR{100} > CLASS OR ATTRIBUTE SELECTORS{10} > ELEMENT SELECTOR{1} > UNIVERSAL SELECTOR{0}
+2. ORIGIN: If the css comes from browser which is known as user agent style-sheets works only if we have'nt
+           provided css but if we have written CSS then user agent stylesheets will be overwritten
+3. IMPORTANCE: if we provide important in selector then that will be applied and it will have more weight than
+               others.SABSE JYDA PRIORITY HOGI ISKI
+               important ki specificity 10,000 hai to isko overwrite krna is very difficult
+        -->
+
+<body>
+    <div>
+        <h1 class="yellow cred cpurple"  data-x="a" href :hover>CSS specificity</h1>
+        
+    </div>
+</body>
+</html>

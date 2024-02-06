@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS sizing units</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* html is a root element */
+      html {
+        font-size: 12px;
+      }
+
+      .box {
+        box-sizing: border-box;
+        border: 2px solid black;
+        /* width:1920px; */
+        /* viewport width is responsive unit jitna hamara viewport hai utni ye width lelega */
+        width: 80vw;
+        height: 10vh;
+        margin: auto;
+        /* margin only works in case of blocklevel element */
+        background-color: aquamarine;
+      }
+      .container {
+        box-sizing: border-box;
+        border: 2px solid black;
+        /* width:1920px; */
+        width: 80vw;
+        margin: 23px auto;
+        /* here 23px is margin from top bottom and auto is from left and right */
+        /* it only works in case of blocklevel element */
+        background-color: aquamarine;
+        height: 80vh;
+        /* it means height of container is 80 percent of the height of viewport */
+        font-size: 16px; /*default size is 16 px*/
+      }
+      .container p {
+        font-size: 2em;
+        /*whatever the value of em is that times the
+        default or the inherited size will be the actual size of text*/
+      }
+      .mycont {
+        box-sizing: border-box;
+        border: 2px solid black;
+        margin: 23px auto;
+        background-color: pink;
+        color: black;
+        font-size: 3em;
+        width: 70vw;
+        min-height: 50vh;
+        /* min-height hame minimum height de dega aur maximum ki koi limit ni mtlb jyda content pe adjustable */
+        /* same goes for min width */
+
+        /* in phone vmin is width
+           in pc    vmin is height
+           100vmin means 100 of minimum of height or width which is small
+            */
+      }
+      .mycont > div {
+        border: 2px solid black;
+        font-size: 2rem;
+        width: 50%;
+        margin: 45px auto;
+        /* % property mean that parent ke box ki 50 percent */
+      }
+      .mycont > div > div {
+        border: 2px solid black;
+        font-size: 2rem;
+        width: 50%;
+        margin: 23px auto;
+      }
+      .ab>p{
+        border: 2px solid black;
+        width:80vw;
+        height: 10vh;
+        margin: 23px auto;
+        font-size: 2rem;
+        background-color: pink;
+        color: black;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">this is a box</div>
+    <div class="ab">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ut ex
+        dolorem reprehenderit aliquid quae, dicta tempora voluptatibus deserunt
+        dolore minima facilis sapiente.
+      </p>
+    </div>
+    <div class="container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ullam
+        eius corporis, aliquam cumque iste perferendis possimus officia quisquam
+        magnam aliquid excepturi incidunt a eos soluta dolores nemo. Hic, iste.
+        Perferendis reprehenderit in animi dolorum quibusdam eos maiores quidem.
+        Porro, temporibus officiis vel et a quasi nesciunt magni odio nobis in,
+        dolorum consequatur, nihil laborum sed.
+      </p>
+    </div>
+    <div class="mycont">
+      i am another container
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+        assumenda nisi sed, error et animi minima sint reiciendis ex hic illo
+        necessitatibus suscipit natus dignissimos odio dolores. Enim repellendus
+        consequuntur neque id recusandae ad aliquid error eum pariatur magni
+        esse repudiandae at nobis, rerum quibusdam dolore? A, quis. Quibusdam
+        hic eaque sequi provident! Quibusdam laborum molestias beatae ipsum
+        error minima!
+
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          voluptatibus, id, fugiat eum nostrum, cumque explicabo accusamus vitae
+          velit aliquid incidunt libero unde? Provident amet dignissimos,
+          numquam quod, architecto mollitia impedit eos quae in ut unde,
+          corrupti minima pariatur voluptatum.
+        </div>
+      </div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ad
+      ratione dicta perferendis, deleniti accusamus possimus libero esse optio
+      quisquam harum modi molestias mollitia. Vitae eum perferendis pariatur
+      officia alias?
+    </div>
+  </body>
+</html>

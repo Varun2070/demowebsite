@@ -1,0 +1,14 @@
+.red{
+    color: white;
+
+}
+.yellow{
+    background-color: black;
+}
+#firstdiv{
+    /* background-color: yellow; */
+}
+
+/* in css . is used to target class
+# is used to target id 
+*/

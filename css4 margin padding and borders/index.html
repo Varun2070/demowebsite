@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS box model</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        background-color: aqua;
+      }
+      .box1 {
+        color: maroon;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid blue;
+        height: 200px;
+        box-sizing: border-box;
+      }
+      .box2 {
+        color: red;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid black;
+        height: 200px;
+        box-sizing: border-box;
+      }
+      /* content ke bahar padding hoti hai or uske bad ata
+         hai border and uske bad ata hai margin 
+         padding or margin charo tarf lagti hai  
+      */
+      /*
+      to calculate the height of an element 2 cases:
+
+      1.with  box-sizing: border-box; isse sari height divide ho jayegi in content, padding, and border
+      pr margin is not included
+
+
+      2.without box-sizing: border-box;
+      jo bhi height di hogi wo sirf content  ki height hogi
+       
+      */
+
+      /*
+      MARGIN COLLAPSE: agr do element ki margin collapse ho rhi hai to jo bhi maximum margin hai whi lag 
+      jaegi dono ke bich mein ,dono ki margin ka sum hoke NI lagegi dono ke bich mein
+      
+      */
+
+    </style>
+  </head>
+  <body>
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am another box</div>
+  </body>
+</html>

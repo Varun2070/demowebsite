@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectors</title>
+    <style>
+        /* Element Selectors */
+        /* div{
+            background-color: red;
+
+        } */
+
+        /* class selectors */
+        .red{
+            background-color: red;
+            color: white;
+
+        }
+
+        /* id slectors */
+        #green{
+            background-color: green;
+            color: lemonchiffon;
+        }
+
+
+        /* child selectors */
+        div > p{
+            color: blue;
+            background-color: brown;
+        }
+        /* ye tabhi chlega agr dirctly div ke bad p hai  */
+
+        
+        /* descendent selectors */
+        div  p{
+            color: blue;
+            background-color: brown;
+        }
+        /* agr div mein kahi bhi p hai tb ye wala apply ho jaega */
+
+
+
+        /* unversal selectors */
+       * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        /* pseudo selectors  */
+        a:visited{
+            color: yellowgreen; /* isse anchor tag ka color purple ho jayeg after visit*/
+        }
+        a:link{
+            color:magenta;/* koi bhi link jo visited na ho uska color darkblue ho jaega*/
+        }
+        a:active{
+         background-color: red;/*jab bhi link ko click krunga tab uska color ye ho jaega*/
+        }
+        a:hover{
+            background-color: blue;/*jb bhi koi hover krega tb uska color ye ho jaega*/
+        }
+
+        p:first-child{
+            background-color: aqua;
+        }/* jahan jahan p apne parent ka first child hai usme ye wali command lag jayegi*/
+
+/*
+        a{
+            background-color: blue;
+        }
+        a.yellow{
+            background-color: pink;
+        }
+        a.yellow[href]{
+            background-color: magenta;
+        }
+        a.yellow[href]{
+            background-color: chartreuse;
+        }
+*/        
+
+
+
+    </style>
+</head>
+<body>
+    
+    <main class="one">
+        <p>I am first</p>
+        <p>I am second</p>
+    </main>
+    <div class="red">
+        I am a div
+        <article>
+        <p>I am a para inside div</p>
+        </article>
+    </div>
+    <div  id="green">this is sahlal</div>
+    <a class="yellow" href="https:www.youtube.com" >Go to Youtube</a>
+    <a class="yellow" href="https:www.amazon.to" >Go to Amazon</a>
+    
+</body>
+</html>
